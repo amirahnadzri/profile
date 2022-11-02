@@ -1,0 +1,151 @@
+<!--REQUIREMENTS:
+    1.Personal Information:
+    -Name ✓
+    -Affiliation ✓
+    -Email ✓
+    -GitHub account ✓
+    -Interests ✓
+    -etc. ✓
+
+    2.Photo <img> ✓
+
+    3.Links (at least 3 <a>) ✓
+        -favourite songs
+        -movie recommendations
+
+    4.Table (at least 1 <table>) ✓
+        -personal information
+
+    5.List (at least 1 <ul> or <ol>) ✓
+        -favourite songs
+        -movie recommendations
+
+    6.Bootstrap (at least 3 classes) ✓
+        -Button (outline button)
+        -Dropdown 
+        -Offcanvas
+        -Tooltip
+
+    7.Utility classes (at least 3) ✓
+        -Border (width & radius @ img)
+        -Opacity (@ header)
+        -Sizing (@ table)
+        -Spacing (@ dropdown)
+
+    8.Custom CSS (at least 3 CSS rules, put 'id' or 'class') ✓
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+        <title>My Profile</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+
+        <!--HEADER-->
+            <div class="header opacity-75">
+                <h1>Welcome to my Profile!</h1>
+            </div>
+        
+        <!--PICTURE-->
+            <div class="pic">
+                <img src="photo.png" class="border border-5 rounded-pill" alt="meme" width="400" />
+            </div>
+            
+        <!--ABOUT ME/PERSONAL INFORMATION-->
+            <div class="wrapper">
+                <table class="w-75 p-3">
+                    <tr>
+                        <th>Name</th>
+                        <td>Amirah Binti Ahmad Nadzri</td>
+                    </tr>
+                    <tr>
+                        <th>Affiliation</th>
+                        <td>Sungkyunkwan University</td>
+                    </tr>
+                    <tr>
+                        <th>Major</th>
+                        <td>Software</td>
+                    </tr>
+                    <tr>
+                        <th>Student ID</th>
+                        <td>2019313857</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>amirah.nadzri@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th>Github</th>
+                        <td><a href="https://github.com/amirahnadzri" data-bs-toggle="tooltip" data-bs-title="Click to check my Github!">My Github Account</a></td>
+                    </tr>
+                    <tr>
+                        <th>Favourite Songs</th>
+                        <td>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=mkR_Qwix4Ho">Taylor Swift - Lavender Haze</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=Odh9ddPUkEY">Taylor Swift - Midnight Rain</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=rg18Kf4en2o">Taylor Swift - Karma</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+
+                
+            </div>
+
+            <!--MOVIE RECOMMENDATIONS-->
+            <button class="btn btn btn-outline-dark" 
+                type="button" 
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" 
+                aria-controls="offcanvasExample">
+                    Movie Recommendations
+            </button>
+
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Movie Recommendations</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div>
+                    <ol>
+                        <li>Flipped (2010)</li>
+                        <li>The Hunger Games (2012)</li>
+                        <li>Suicide Squad (2016)</li>
+                    </ol>
+                  </div>
+                  <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=q40GxY5n2Dg">Flipped (2010)</a></li>
+                        <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=PbA63a7H0bo">The Hunger Games (2012)</a></li>
+                        <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=CmRih_VtVAs">Suicide Squad (2016)</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            <!--Bootstrap JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            <script>
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            </script>    
+        
+    </body>
+</html>

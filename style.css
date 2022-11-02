@@ -1,0 +1,80 @@
+@keyframes color {
+    0%   { background: #0dcaf0; }
+    20%  { background: #6f42c1; }
+    40%  { background: #d63384; }
+    60%  { background: #dc3545; }
+    80%  { background: #d63384; }
+    100% { background: #0dcaf0; }
+    
+  }
+  
+  body {
+    background: #0dcaf0; 
+    animation: color 9s infinite linear;
+    text-align: center;
+    padding: 2em;
+  }
+
+.header{
+    background-color: black;
+    /*opacity: .8;*/
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 15px;
+}
+
+.header h1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    text-align: center;
+}
+
+
+
+.pic{
+    /*border: 1px solid black;*/
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border-collapse: collapse;
+    border-radius: 25px;
+  }
+  th, td {
+    border: 1px solid transparent;
+    background-color: black;
+    opacity: .8;
+    color: white;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    text-align: center;
+  }
+
+.btn-movie{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.offcanvas{
+    background-color: black;
+}
+
+.offcanvas-title{
+    color: white;
+}
+
+.offcanvas-body li{
+    color: white;
+}
